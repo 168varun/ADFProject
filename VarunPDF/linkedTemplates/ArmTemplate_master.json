@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "VarunPDF"
+		},
+		"DemoDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'DemoDBLS'"
+		},
+		"LocalFileLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LocalFileLS'"
+		},
+		"TestDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'TestDBLS'"
+		},
+		"LocalFileLS_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Users\\Varun\\Desktop\\LTI_NEW\\_Training\\CASE_STUDY\\Project3\\DATA"
+		},
+		"LocalFileLS_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "varun"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "VarunPDF_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"DemoDBLS_connectionString": {
+						"value": "[parameters('DemoDBLS_connectionString')]"
+					},
+					"TestDBLS_connectionString": {
+						"value": "[parameters('TestDBLS_connectionString')]"
+					},
+					"LocalFileLS_password": {
+						"value": "[parameters('LocalFileLS_password')]"
+					},
+					"LocalFileLS_properties_typeProperties_host": {
+						"value": "[parameters('LocalFileLS_properties_typeProperties_host')]"
+					},
+					"LocalFileLS_properties_typeProperties_userId": {
+						"value": "[parameters('LocalFileLS_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
