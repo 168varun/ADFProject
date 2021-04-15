@@ -1,0 +1,9 @@
+{
+	"name": "VarunPDF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ecf0c7a2-2f2d-449d-a4b7-25b473509a5f",
+		"tenantId": "142a8c0d-f4f8-4075-9e95-8c7b13fedb8f"
+	}
+}
