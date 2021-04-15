@@ -79,7 +79,17 @@
 		],
 		"parameters": {
 			"sheetNames": {
-				"type": "array"
+				"type": "array",
+				"defaultValue": [
+					"DefectType",
+					"Date",
+					"Vendor",
+					"Category",
+					"Plant",
+					"Metrics",
+					"MaterialType",
+					"Defect"
+				]
 			}
 		},
 		"annotations": [],
