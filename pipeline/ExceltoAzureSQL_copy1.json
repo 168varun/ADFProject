@@ -36,7 +36,7 @@
 								},
 								"sink": {
 									"type": "AzureSqlSink",
-									"preCopyScript": "drop table if exists @item();",
+									"preCopyScript": "drop table if exists [dbo].[@{item()}]",
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
