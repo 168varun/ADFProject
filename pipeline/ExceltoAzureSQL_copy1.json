@@ -36,10 +36,7 @@
 								},
 								"sink": {
 									"type": "AzureSqlSink",
-									"preCopyScript": {
-										"value": "drop table if exists @{item()};",
-										"type": "Expression"
-									},
+									"preCopyScript": "drop table if exists @item();",
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
@@ -67,7 +64,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "CopySQLSrc",
+									"referenceName": "TestSink",
 									"type": "DatasetReference",
 									"parameters": {
 										"tableName": {
