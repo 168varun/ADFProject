@@ -21,7 +21,7 @@
 		},
 		"LocalFileLS_properties_typeProperties_host": {
 			"type": "string",
-			"defaultValue": "C:\\Users\\Varun\\Desktop\\LTI_NEW\\_Training\\CASE_STUDY\\Project3\\DATA"
+			"defaultValue": "C:\\Users\\varun\\Desktop\\_Training\\CASE_STUDY\\Project3\\DATA"
 		},
 		"LocalFileLS_properties_typeProperties_userId": {
 			"type": "string",
