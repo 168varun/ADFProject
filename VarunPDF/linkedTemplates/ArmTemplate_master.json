@@ -15,13 +15,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LocalFileLS'"
 		},
-		"TestDBLS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'TestDBLS'"
-		},
 		"LocalFileLS_properties_typeProperties_host": {
 			"type": "string",
-			"defaultValue": "C:\\Users\\varun\\Desktop\\_Training\\CASE_STUDY\\Project3\\DATA"
+			"defaultValue": "C:\\Users\\Varun\\Desktop\\LTI_NEW\\_Training\\CASE_STUDY\\Project3\\DATA"
 		},
 		"LocalFileLS_properties_typeProperties_userId": {
 			"type": "string",
@@ -56,9 +52,6 @@
 					},
 					"DemoDBLS_connectionString": {
 						"value": "[parameters('DemoDBLS_connectionString')]"
-					},
-					"TestDBLS_connectionString": {
-						"value": "[parameters('TestDBLS_connectionString')]"
 					},
 					"LocalFileLS_password": {
 						"value": "[parameters('LocalFileLS_password')]"

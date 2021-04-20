@@ -11,11 +11,8 @@
 		"LocalFileLS_password": {
 			"value": ""
 		},
-		"TestDBLS_connectionString": {
-			"value": ""
-		},
 		"LocalFileLS_properties_typeProperties_host": {
-			"value": "C:\\Users\\varun\\Desktop\\_Training\\CASE_STUDY\\Project3\\DATA"
+			"value": "C:\\Users\\Varun\\Desktop\\LTI_NEW\\_Training\\CASE_STUDY\\Project3\\DATA"
 		},
 		"LocalFileLS_properties_typeProperties_userId": {
 			"value": "varun"
